@@ -223,7 +223,7 @@ color: #fff;
 		<div class="footer">
 			<p>I've got soul but i'm not a soldier</p>
 			<ul>
-				<li> <div class="box"><a href="#" class="wxewm"><img src="./images/wechat.png"></a></div></li>
+				<li> <div class="box"><a class="wxewm"><img src="./images/wechat.png"></a></div></li>
 				<li><a href="http://www.renren.com/340191401" ><img src="./images/renren.png" alt="" /></a></li>
 				<li><a href="http://weibo.com/1825494365/profile?topnav=1&wvr=6" ><img src="./images/weibo.png" alt="" /></a></li>
 				
@@ -301,7 +301,7 @@ color: #fff;
 		  message:$message.val()
 		  },
 	  success: function(data) {
-		alert("thank you for the message !");
+		alert("Thank you for the message! I'll catch you up soon!");
 	    console.log("data added!", data); //the new item is returned with an ID
 	  }
 	});
@@ -313,7 +313,7 @@ color: #fff;
  
 	$(".wxewm").mouseover(function(e){
 
-		var wx_content="<div class='big_box'>"+"<div class='wx_title'>"+"Scan My QR Code"+"</div>"+"<div class='wx_ewm'>"+"<img src='images/qrCode.JPG' width='128' height='128'>"+"</div>"+"<div class='wx_bottom'>"+"Add me on Wechat"+"</div></div>";
+		var wx_content="<div class='big_box'>"+"<div class='wx_title'>"+"Scan My QR Code"+"</div>"+"<div class='wx_ewm'>"+"<img src='images/qrCode.JPG' width='200' height='200'>"+"</div>"+"<div class='wx_bottom'>"+"Add me on Wechat"+"</div></div>";
 
 		$(".box").append(wx_content);
 
