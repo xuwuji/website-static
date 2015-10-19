@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Wuji,Xu Home</title>
+		<link href="./css/style.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="./css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    	<link href="./css/styles.css?v=1.6" rel="stylesheet">
+		<!-- web-font -->
+	
+		<!-- web-font -->
+	
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<style type="text/css">
+		#map_canvas {
+			margin-left: auto;
+			margin-right: auto;
+			width: 600px;
+			height: 400px;
+			overflow: hidden;
+			margin:0 auto;
+			font-family:'Quicksand', sans-serif;
+			border:1px solid #F00;
+			
+			}
+		#map{
+			padding: 10px 0 40px 0;
+		}
+			
+		.contact-us{
+			margin-top:  :50px;
+			border-top:1px solid #778899;
+			border-bottom: :1px solid #778899;
+			background:#282E3A;
+			padding: 20px 0 80px 0;
+		}
+.contact-grid p{
+	color: #fff;
+  margin: 18px auto 0 auto;
+	width: 61%;
+	font-size: 14px;
+  line-height: 1.8em;
+	}
+.contact-grid p a{
+	color: #fff;
+	text-decoration:none;
+	}
+.contact-grid p a:hover{
+	color: #323b43;
+	}
+.contact-info {
+	margin-top: 60px;
+	}
+.contact-info input[type="text"]{
+	width: 31%;
+}
+.contact-info input[type="text"]:nth-child(3){
+margin-right:0;
+}
+.contact-info input[type="text"],.contact-info textarea{
+background:#ffffff;
+border:none;
+	color: #c9c9c9;
+	margin: 0 25px 23px 0;
+	padding: 12px 10px;
+	outline: none;
+	}
+.contact-info textarea{
+margin-right:0;
+	width: 98%;
+	resize: none;
+	height: 225px;
+	}
+.contact-info input[type=submit] {
+color: #fff;
+  padding: 13px 43px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+  background: #323b43;
+  border: none;
+	}
+.contact-info input[type=submit]:hover {
+	background:#ced7df;
+	color: #323b43;
+	transition: .5s all;
+	-webkit-transition: .5s all;
+	-o-transition: .5s all;
+	-ms-transition: .5s all;
+	-moz-transition: .5s all;	
+	}
+		
+	.btm-clr .glyphicon-star,.btm-clr .glyphicon-cog,.btm-clr .glyphicon-map-marker,.btm-clr .glyphicon-thumbs-up,.btm-clr .glyphicon-globe {
+  z-index: 9999;
+  top: 27px;
+  left: 0px;
+  font-size: 45px;
+  color: #fff;
+}
+	</style>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=LeQM3YEmMBqF6zvn4WmRdNb0"></script>
+	</head>
+	<body>
+		
+		<!-- header -->
+      <script src="./js/jquery.min.js"></script>
+      <script src="./js/scripts.js?v=1.7"></script>
+		<div id="home" class="head-bg">
+			<div class="head-info">
+				<h1> Hi, this is <span>Wuji,Xu</span></h1>
+				<p> <i >Student from USTC & Intern in eBay Inc.</i></p>
+			</div>
+			<div class="user-img">
+				<img src="./images/user1.png" alt="" />
+			</div>
+		</div>
+		<!-- //header -->
+		<!-- header-bottom -->
+		<div id="expertise" class="header-bottom">
+			<!-- container -->
+			<div class="container wrap">
+				<div class="bottom-grids">
+					<div class="bottom-grid">
+						<div class="grid-img"> </div>
+						<div class="grid-text">
+							<h3><a href="coding.html" >Coding</a></h3>
+							
+						</div>
+						<div class="clearfix"> </div>
+						<p>Focus on Java, Java Web, Big Data.</p>
+					</div>
+					<div class="bottom-grid">
+						<div class="grid-img web"> </div>
+						<div class="grid-text">
+							<h3><a href="school.html" >School</a></h3>
+						</div>
+						<div class="clearfix"> </div>
+						<p>Northeastern university, China -Software Enigneering - Bachelor</p>
+						<p>Aalborg University, Denmark -Intelligence Information System - Exchange</p>
+						<p>USTC, China -Software Enigneering - Master</p>
+					</div>
+					<div class="bottom-grid bottom">
+						<div class="grid-img exp"> </div>
+						<div class="grid-text">
+							<h3><a href="experimental.html" >Experimental</a></h3>
+						</div>
+						<div class="clearfix"> </div>
+						<p>Willing to see more about this world. </p>
+					</div>
+					<div class="bottom-grid bottom">
+						<div class="grid-img super"> </div>
+						<div class="grid-text">
+							<h3><a href="coding.html" >Project</a></h3>
+						</div>
+						<div class="clearfix"> </div>
+						<p>Follow up some projects, Contact me if you are interested.</p>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+			<!-- //container -->
+		</div>
+		<!-- //header-bottom -->
+		<!-- portfolio -->
+		
+
+		
+		<!-- //date -->
+		<!-- map -->
+		<div class="footer">
+			<div id="map">
+			<p>Where Am I ?</p>
+			<br />
+			<br />
+			<p></p>
+		
+		<div id="map_canvas"></div>
+		</div>
+		<div>
+		<!-- map -->
+		
+		
+		<!-- contact-us -->
+<div class="contact-us">
+	<p>Feel Free To Contact Me</p>
+	<div class="container">
+		<div class="contact-grids">
+			<div class="col-md-4 contact-grid text-center">
+				<div class="point-icon"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></div>
+				<p>Jl. Pahlawan VII No.247-D Sidoarjo-Surabaya-Indonesia</p>
+			</div>
+			<div class="col-md-4 contact-grid text-center">
+				<div class="point-icon"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></div>
+				<p><a href="mailto:info@example.com">rudhisasmito@gmail.com</a></p>
+			</div>
+			<div class="col-md-4 contact-grid text-center">
+				<div class="point-icon"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span></div>
+				<p>+613 0000 0000</p>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="contact-info">
+			<form>
+				<input type="text" placeholder="Your Name" required>
+				<input type="text" placeholder="Your E-Mail" required>
+				<input type="text" placeholder="Subject" required>
+				<textarea placeholder="Your Message" required></textarea>
+				<input type="submit" value="SEND MESSAGE">
+			</form>
+		</div>
+	</div>
+</div>
+<!-- //contact-us -->
+		
+		<!-- footer -->
+		<div class="footer">
+			<p>I've got soul but i'm not a soldier</p>
+			<ul>
+				
+				<li><a href="" ><img id="weixin" src="./images/wechat.png" alt="" /></a></li>
+				<li><a href="http://www.renren.com/340191401" ><img src="./images/renren.png" alt="" /></a></li>
+				<li><a href="http://weibo.com/1825494365/profile?topnav=1&wvr=6" ><img src="./images/weibo.png" alt="" /></a></li>
+				
+			</ul>
+				
+		</div>
+		<!-- //footer -->
+		
+	
+		<!-- <audio src="./Tray%20Jack%20-%20All%20That.mp3" autoplay="autoplay"></audio>-->
+		
+	</body>
+	
+
+<html>
+	<script type="text/javascript">
+	// 百度地图API功能
+	var map = new BMap.Map("map_canvas");    // 创建Map实例
+	map.centerAndZoom(new BMap.Point(121.59334,31.216776), 15);  // 初始化地图,设置中心点坐标和地图级别
+	var point=new BMap.Point(121.59334,31.216776);
+	var marker = new BMap.Marker(point);
+	map.addOverlay(marker);
+	map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+	//map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
+	map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+	var opts = {
+	  width : 200,     // 信息窗口宽度
+	  height: 80,     // 信息窗口高度
+	  title : "German Center Tower 3" , // 信息窗口标题
+	  enableMessage:true,//设置允许信息窗发送短息
+	  message:"What's up"
+	}
+	var infoWindow = new BMap.InfoWindow("Address: 88 KeYuan Road, PuDong New Distrct, ShangHai", opts);  // 创建信息窗口对象 
+	marker.addEventListener("click", function(){          
+		map.openInfoWindow(infoWindow,point); //开启信息窗口
+	});
+	</script>
+<script type="text/javascript">
+$.ajax({
+  type: 'GET',
+  url: 'http://rest.learncode.academy/api/xuwuji/test',
+  success: function(data) {
+    console.log("I have friends!", data); //returns all of johnbob's friends
+  }
+});
+
+
+var $email=$('#email');
+var $comment=$('#comment');
+var $add_button=$('#add_button');
+
+$add_button.live('click',function(){
+	
+	$.ajax({
+  type: 'POST',
+  url: 'http://rest.learncode.academy/api/xuwuji/test',
+  data: {
+	  email: $email.val(), 
+	  Comment: $comment.val()  , 
+	  },
+  success: function(data) {
+	  alert("thank you for the message !");
+    console.log("data added!", data); //the new item is returned with an ID
+  }
+});
+
+}); 
+
+		
+	</script>
+	
