@@ -192,11 +192,42 @@ li.start {
 	-o-transition: .5s all;
 	-ms-transition: .5s all;
 }
+
+/*-- weixin --*/
+
+.box{ }
+.big_box{ 
+	border: solid 1px #999;
+	width: 200px; 
+	border-radius: 5px; 
+	background: #eee; 
+	position: absolute; 
+	display: none;
+	filter:alpha(opacity=50);
+	opacity: 0.9;
+}
+
+.wx_title{ border-bottom: solid 1px #ccc; line-height: 30px; font-size: 16px; font-family: 微软雅黑; text-indent: 1em;}
+.wx_ewm{ text-align: center; padding: 10px; border-bottom: solid 1px #ccc; }
+.wx_bottom{ padding: 5px 10px; line-height: 20px;}
+
+
+
+#copyright p{
+	text-align: center;
+	background: #282E3A;
+	font-size: 16px;
+	color: #FFF;
+	margin-top: 2em;
+	text-transform: lowercase;
+	font-family:'Quicksand', sans-serif;
+}
+
 /*-- footer --*/
 .footer{
 	background: #282E3A;
 	text-align: center;
-	padding: 6em 0;
+	padding: 4em 0;
 }
 .footer p{
 	color:#FDF210;
@@ -210,6 +241,7 @@ li.start {
 }
 .footer ul li{
 	display:inline-block;
+	margin: 4px 4px ;
 }
 .footer ul li a.twitter{
 	background: url(../images/img-sp.png) no-repeat -50px -52px;
@@ -239,24 +271,7 @@ li.start {
 .footer ul li a.chrome:hover{
 	background: url(../images/img-sp.png) no-repeat -131px -90px;
 }
-.footer p.copyright{
-	font-size: 16px;
-	color: #FFF;
-	margin-top: 2em;
-	text-transform: lowercase;
-}
-.footer p.copyright a{
-	color: #FFF;
-}
-.footer p.copyright a:hover{
-	color:#FDF210;
-	text-decoration:none;
-	transition: .5s all;
-	-webkit-transition: .5s all;
-	-moz-transition: .5s all;
-	-o-transition: .5s all;
-	-ms-transition: .5s all;
-}
+
 
 .footer div{
 	margin:0 auto;
@@ -600,9 +615,7 @@ left: 40%;
 	.footer ul {
 		margin: 1em 0 0 0;
 	}
-	.footer p.copyright {
-		margin-top: 1em;
-	}
+	
 }
 @media (max-width:320px)
 {

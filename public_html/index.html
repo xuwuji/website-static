@@ -5,12 +5,15 @@
 		<link href="./css/style.css" rel="stylesheet" type="text/css" media="all" />
 		<link href="./css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
     	<link href="./css/styles.css?v=1.6" rel="stylesheet">
+
 		<!-- web-font -->
 	
 		<!-- web-font -->
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
 		<style type="text/css">
+
 		#map_canvas {
 			margin-left: auto;
 			margin-right: auto;
@@ -25,13 +28,17 @@
 		#map{
 			padding: 10px 0 40px 0;
 		}
+
+		.footer{
+			border-top:1px solid #778899;
+		}
 			
 		.contact-us{
 			margin-top:  :50px;
 			border-top:1px solid #778899;
 			border-bottom: :1px solid #778899;
 			background:#282E3A;
-			padding: 20px 0 80px 0;
+			padding: 4em 0;
 		}
 .contact-grid p{
 	color: #fff;
@@ -97,6 +104,7 @@ color: #fff;
   color: #fff;
 }
 	</style>
+
 	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=LeQM3YEmMBqF6zvn4WmRdNb0"></script>
 	</head>
 	<body>
@@ -186,26 +194,26 @@ color: #fff;
 		<div class="contact-grids">
 			<div class="col-md-4 contact-grid text-center">
 				<div class="point-icon"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></div>
-				<p>Jl. Pahlawan VII No.247-D Sidoarjo-Surabaya-Indonesia</p>
+				<p>88 Keyuan Road, German Centry, Pudong New District, ShangHai</p>
 			</div>
 			<div class="col-md-4 contact-grid text-center">
 				<div class="point-icon"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></div>
-				<p><a href="mailto:info@example.com">rudhisasmito@gmail.com</a></p>
+				<p><a href="mailto:craigxu@foxmail.com">craigxu@foxmail.com</a></p>
 			</div>
 			<div class="col-md-4 contact-grid text-center">
 				<div class="point-icon"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span></div>
-				<p>+613 0000 0000</p>
+				<p>P.C. 201203</p>
 			</div>
 			<div class="clearfix"></div>
 		</div>
 		<div class="contact-info">
-			<form>
-				<input type="text" placeholder="Your Name" required>
-				<input type="text" placeholder="Your E-Mail" required>
-				<input type="text" placeholder="Subject" required>
-				<textarea placeholder="Your Message" required></textarea>
-				<input type="submit" value="SEND MESSAGE">
-			</form>
+			
+				<input type="text" id="message_name" placeholder="Your Name" required>
+				<input type="text" id="message_email" placeholder="Your E-Mail" required>
+				<input type="text" id="message_subject" placeholder="Subject" required>
+				<textarea id="message" placeholder="Your Message" required></textarea>
+				<input id="add_button" type="submit" value="SEND MESSAGE">
+			
 		</div>
 	</div>
 </div>
@@ -215,8 +223,7 @@ color: #fff;
 		<div class="footer">
 			<p>I've got soul but i'm not a soldier</p>
 			<ul>
-				
-				<li><a href="" ><img id="weixin" src="./images/wechat.png" alt="" /></a></li>
+				<li> <div class="box"><a href="#" class="wxewm"><img src="./images/wechat.png"></a></div></li>
 				<li><a href="http://www.renren.com/340191401" ><img src="./images/renren.png" alt="" /></a></li>
 				<li><a href="http://weibo.com/1825494365/profile?topnav=1&wvr=6" ><img src="./images/weibo.png" alt="" /></a></li>
 				
@@ -225,13 +232,17 @@ color: #fff;
 		</div>
 		<!-- //footer -->
 		
-	
+	<div id="copyright">
+			 <p>Copyright (c) 2015 Wuji,Xu</p>
+	</div>
+
 		<!-- <audio src="./Tray%20Jack%20-%20All%20That.mp3" autoplay="autoplay"></audio>-->
 		
 	</body>
 	
 
 <html>
+
 	<script type="text/javascript">
 	// 百度地图API功能
 	var map = new BMap.Map("map_canvas");    // 创建Map实例
@@ -253,38 +264,67 @@ color: #fff;
 	marker.addEventListener("click", function(){          
 		map.openInfoWindow(infoWindow,point); //开启信息窗口
 	});
-	</script>
-<script type="text/javascript">
-$.ajax({
-  type: 'GET',
-  url: 'http://rest.learncode.academy/api/xuwuji/test',
-  success: function(data) {
-    console.log("I have friends!", data); //returns all of johnbob's friends
-  }
-});
 
-
-var $email=$('#email');
-var $comment=$('#comment');
-var $add_button=$('#add_button');
-
-$add_button.live('click',function(){
-	
+	//get message
 	$.ajax({
-  type: 'POST',
-  url: 'http://rest.learncode.academy/api/xuwuji/test',
-  data: {
-	  email: $email.val(), 
-	  Comment: $comment.val()  , 
-	  },
-  success: function(data) {
-	  alert("thank you for the message !");
-    console.log("data added!", data); //the new item is returned with an ID
-  }
-});
+	  type: 'GET',
+	  url: 'http://rest.learncode.academy/api/xuwuji/test',
+	  success: function(data) {
+	    console.log("I have friends!", data); 
+	  }
+	});
 
-}); 
+	//post a new message
+	var $message_name=$('#message_name');
+	var $message_email=$('#message_email');
+	var $message_subject=$('#message_subject');
+	var $message=$('#message');
+	var $add_button=$('#add_button');
 
+	$add_button.live('click',function(){
 		
+	var new_message= {
+		  user_name:$message_name.val(),
+		  user_email:$message_email.val(), 
+		  subject: $message_subject.val(),
+		  message:$message.val()
+		  };
+
+		$.ajax(
+		{
+	  type: 'POST',
+	  url: 'http://rest.learncode.academy/api/xuwuji/test',
+	  data: {
+		  user_name:$message_name.val(),
+		  user_email:$message_email.val(), 
+		  subject: $message_subject.val(),
+		  message:$message.val()
+		  },
+	  success: function(data) {
+		alert("thank you for the message !");
+	    console.log("data added!", data); //the new item is returned with an ID
+	  }
+	});
+	}); 
+
+	//weixin
+	var x=5;
+	var y=5;
+ 
+	$(".wxewm").mouseover(function(e){
+
+		var wx_content="<div class='big_box'>"+"<div class='wx_title'>"+"Scan My QR Code"+"</div>"+"<div class='wx_ewm'>"+"<img src='images/qrCode.JPG' width='128' height='128'>"+"</div>"+"<div class='wx_bottom'>"+"Add me on Wechat"+"</div></div>";
+
+		$(".box").append(wx_content);
+
+		$(".big_box").css({left:(e.pageX+x)+'px',top:(e.pageY+y)+'px'}).show("fast");
+
+	}).mouseout(function(){
+
+		$(".big_box").remove();
+
+	}).mousemove(function(e){
+		$(".big_box").css({left:(e.pageX+x)+'px',top:(e.pageY+y)+'px'});
+	});
+
 	</script>
-	
