@@ -413,7 +413,7 @@ font-size: 28px;
 .request{
 	background:url(../images/ex_request_bg.jpg) no-repeat 0px 0px;
 	background-size:cover;
-	min-height: 640px;
+	height: 400px;
 	position:relative;
 }
 .request-bg{
@@ -421,7 +421,7 @@ font-size: 28px;
 	background: rgba(0, 0, 0, 0.69);
 	position: absolute;
 	width: 100%;
-	min-height: 640px;
+	height: 400px;
 }
 .request-info {
 	margin-top: 14em;
@@ -470,6 +470,17 @@ input[type="submit"]:hover {
 	-o-transition: 0.5s;
 	-ms-transition: 0.5s;
 }
+
+
+/*-- map --*/
+#map{
+	background:url(../images/ex_bg.jpg) no-repeat 0px 0px;
+}
+#europe_map{
+	
+}
+
+
 /*-- footer --*/
 .footer{
 	background:url(../images/ex_bg.jpg) no-repeat 0px 0px;
